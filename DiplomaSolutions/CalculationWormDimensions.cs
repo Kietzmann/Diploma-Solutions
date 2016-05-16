@@ -14,6 +14,20 @@ namespace DiplomaSolutions
             this.inputData = inputData;
         }
 
+        public void invokeCalculations()
+        {
+            calculateCurveRadius();
+            calculateWormCutLength();
+            calculateWormGearWidth();
+            calculateNotchRadius();
+            calculateAxisToCenterDistance();
+            calculateAngleCrossingWormCircle();
+        }
+
+        public void calculateCurveRadius()
+        {
+            calculatedData.RoF1 = inputData.RoAstrxF1*inputData.m;
+        }
 
         public void calculateWormCutLength()
         {
@@ -23,10 +37,10 @@ namespace DiplomaSolutions
             calculatedData.b1 = 2*Math.Sqrt(firstAdd - secondAdd + thirdAdd);
         }
 
-        public void calculateWormGearWidth(WormGearTypes.GearTypes gearType)
+        public void calculateWormGearWidth()
         {
             //TODO: check variants with another z1;
-            if (gearType != WormGearTypes.GearTypes.ZT1 || gearType != WormGearTypes.GearTypes.ZT2)
+            if (inputData.gearType != WormGearTypes.GearTypes.ZT1 || inputData.gearType != WormGearTypes.GearTypes.ZT2)
             {
                 if (inputData.z1 <= 4)
                 {
@@ -49,21 +63,21 @@ namespace DiplomaSolutions
             calculatedData.rK = 0.5*calculatedData.d1 - calculatedData.hAL;
         }
 
-        public void calculateAxisToCenterDistance(WormGearTypes.GearTypes gearType)
+        public void calculateAxisToCenterDistance()
         {
-            if (gearType == WormGearTypes.GearTypes.ZT1 || gearType == WormGearTypes.GearTypes.ZT2)
+            if (inputData.gearType == WormGearTypes.GearTypes.ZT1 || inputData.gearType == WormGearTypes.GearTypes.ZT2)
             {
                 calculatedData.cU = calculatedData.d1/2.0 + inputData.Ro*Math.Sin(calculatedData.alphaN);
             }
         }
 
-        public void calculateAngleCrossingWormCircle(WormGearTypes.GearTypes gearType)
+        public void calculateAngleCrossingWormCircle()
         {
-            if (gearType == WormGearTypes.GearTypes.ZT2)
+            if (inputData.gearType == WormGearTypes.GearTypes.ZT2)
             {
                 calculatedData.gammaU = inputData.m*inputData.z1/(2*calculatedData.cU);
             }
-            if (gearType == WormGearTypes.GearTypes.ZT1)
+            if (inputData.gearType == WormGearTypes.GearTypes.ZT1)
             {
                 calculatedData.gammaU = calculatedData.gamma;
             }

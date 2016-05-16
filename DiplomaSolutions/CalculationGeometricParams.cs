@@ -11,18 +11,33 @@ namespace DiplomaSolutions
         public CalculationGeometricParams(InputData inputData, CalculatedData calculatedData)
         {
             this.inputData = inputData;
-            this.calculatedData = new CalculatedData();
+            this.calculatedData = calculatedData;
+        }
+
+        public void invokeCalculations()
+        {
+            calculateQuantityOfTeeth();
+            calculateWormDrag();
+            calculateTransmitionCoef();
+            calculateInteraxalDistance();
+            calculateDividerLiftAngle();
+            calculateMainLiftAngle();
+            calculateBeginingStartCoef();
+            calculateAngleAxisCutting();
+            calculateAngleNormalCutting();
+            calculateMinCoefDrag();
+            calculateMaxCoefDrag();
         }
 
 
         public void calculateQuantityOfTeeth()
         {
-            inputData.z2 = inputData.z1*calculatedData.uCurr;
+            calculatedData.z2 = inputData.z1*calculatedData.uCurr;
         }
 
         public void calculateWormDrag()
         {
-            inputData.x = inputData.aW/inputData.m - 0.5*(inputData.z2 + inputData.q);
+            calculatedData.x = inputData.aW/inputData.m - 0.5*(inputData.z2 + inputData.q);
         }
 
         public void calculateTransmitionCoef()
@@ -42,7 +57,31 @@ namespace DiplomaSolutions
 
         public void calculateMainLiftAngle()
         {
-            calculatedData.gammaB = Math.Acos(Math.Cos(calculatedData.alphaN)*Math.Cos(calculatedData.gamma));
+            if (inputData.gearType == WormGearTypes.GearTypes.ZI)
+            {
+                calculatedData.gammaB = Math.Acos(Math.Cos(calculatedData.alphaN)*Math.Cos(calculatedData.gamma));
+            }
+        }
+
+        public void calculateBeginingStartCoef()
+        {
+            calculatedData.gammaOmega = inputData.z1/(inputData.q + 2*inputData.x);
+        }
+
+        public void calculateAngleAxisCutting()
+        {
+            if (inputData.gearType != WormGearTypes.GearTypes.ZA)
+            {
+                calculatedData.alphaX = Math.Atan(Math.Tan(inputData.alphaX)/Math.Cos(calculatedData.gamma));
+            }
+        }
+
+        public void calculateAngleNormalCutting()
+        {
+            if (inputData.gearType == WormGearTypes.GearTypes.ZA)
+            {
+                calculatedData.alphaN = Math.Atan(Math.Tan(inputData.alphaX)*Math.Cos(calculatedData.gamma));
+            }
         }
 
         public void calculateMinCoefDrag()

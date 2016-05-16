@@ -14,6 +14,19 @@ namespace DiplomaSolutions
             this.calculatedData = calculatedData;
         }
 
+        public void invokeCalculations()
+        {
+            calculateWormDivisionDiameter();
+            calculateDivisionDiameterWormGear();
+            calculateBeginDiameter();
+            calculateMainDiameter();
+            calculateWormSpinHeight();
+            calculateHeadWormSpinHeight();
+            calculateDiameterPeakWormSpin();
+            calculateDiametersToothWormGear();
+            calculateBiggestWormDiameter();
+        }
+
 
         public void calculateWormDivisionDiameter()
         {
@@ -59,15 +72,15 @@ namespace DiplomaSolutions
                                  inputData.m;
         }
 
-        public void calculateBiggestWormDiameter(WormGearTypes.GearTypes gear)
+        public void calculateBiggestWormDiameter()
         {
             var K = 2;
-            if (gear == WormGearTypes.GearTypes.ZN1 || gear == WormGearTypes.GearTypes.ZN2 ||
-                gear == WormGearTypes.GearTypes.ZN3)
+            if (inputData.gearType == WormGearTypes.GearTypes.ZN1 || inputData.gearType == WormGearTypes.GearTypes.ZN2 ||
+                inputData.gearType == WormGearTypes.GearTypes.ZN3)
             {
                 K = 1;
             }
-            if (gear == WormGearTypes.GearTypes.ZT1 || gear == WormGearTypes.GearTypes.ZT2)
+            if (inputData.gearType == WormGearTypes.GearTypes.ZT1 || inputData.gearType == WormGearTypes.GearTypes.ZT2)
             {
                 K = 4;
             }

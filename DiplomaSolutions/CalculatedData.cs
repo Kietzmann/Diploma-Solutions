@@ -26,6 +26,9 @@ namespace DiplomaSolutions
         public double ha1;
         public double hAL;
         public double M1;
+        public double gammaOmega;
+        public double alphaX;
+        
 
         //From CalculationControls
         public double p1;
@@ -37,5 +40,9 @@ namespace DiplomaSolutions
         public double uCurr;
         public double xMax;
         public double xMin;
+
+        //unknown yet
+        public double z2;
+        public double x;
     }
 }
