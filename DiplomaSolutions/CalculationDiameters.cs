@@ -30,18 +30,18 @@ namespace DiplomaSolutions
 
         public void calculateWormDivisionDiameter()
         {
-            calculatedData.d1 = inputData.q*inputData.m;
+            calculatedData.d1 = Convert.ToInt32(inputData.q*inputData.m);
         }
 
         public void calculateDivisionDiameterWormGear()
         {
-            calculatedData.d2 = inputData.z2*inputData.m;
+            calculatedData.d2 = Convert.ToInt32(inputData.z2*inputData.m);
         }
 
         public void calculateBeginDiameter()
         {
-            calculatedData.dW1 = (inputData.q + inputData.x*2)*
-                                 inputData.m;
+            calculatedData.dW1 = Convert.ToInt32((inputData.q + inputData.x*2)*
+                                 inputData.m);
         }
 
         public void calculateMainDiameter()
@@ -75,12 +75,12 @@ namespace DiplomaSolutions
         public void calculateBiggestWormDiameter()
         {
             var K = 2;
-            if (inputData.gearType == WormGearTypes.GearTypes.ZN1 || inputData.gearType == WormGearTypes.GearTypes.ZN2 ||
-                inputData.gearType == WormGearTypes.GearTypes.ZN3)
+            if (inputData.gearType == WormGearTypes.ZN1 || inputData.gearType == WormGearTypes.ZN2 ||
+                inputData.gearType == WormGearTypes.ZN3)
             {
                 K = 1;
             }
-            if (inputData.gearType == WormGearTypes.GearTypes.ZT1 || inputData.gearType == WormGearTypes.GearTypes.ZT2)
+            if (inputData.gearType == WormGearTypes.ZT1 || inputData.gearType == WormGearTypes.ZT2)
             {
                 K = 4;
             }

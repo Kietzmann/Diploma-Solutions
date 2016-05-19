@@ -40,7 +40,7 @@ namespace DiplomaSolutions
         public void calculateWormGearWidth()
         {
             //TODO: check variants with another z1;
-            if (inputData.gearType != WormGearTypes.GearTypes.ZT1 || inputData.gearType != WormGearTypes.GearTypes.ZT2)
+            if (inputData.gearType != WormGearTypes.ZT1 || inputData.gearType != WormGearTypes.ZT2)
             {
                 if (inputData.z1 <= 4)
                 {
@@ -65,7 +65,7 @@ namespace DiplomaSolutions
 
         public void calculateAxisToCenterDistance()
         {
-            if (inputData.gearType == WormGearTypes.GearTypes.ZT1 || inputData.gearType == WormGearTypes.GearTypes.ZT2)
+            if (inputData.gearType == WormGearTypes.ZT1 || inputData.gearType == WormGearTypes.ZT2)
             {
                 calculatedData.cU = calculatedData.d1/2.0 + inputData.Ro*Math.Sin(calculatedData.alphaN);
             }
@@ -73,11 +73,11 @@ namespace DiplomaSolutions
 
         public void calculateAngleCrossingWormCircle()
         {
-            if (inputData.gearType == WormGearTypes.GearTypes.ZT2)
+            if (inputData.gearType == WormGearTypes.ZT2)
             {
                 calculatedData.gammaU = inputData.m*inputData.z1/(2*calculatedData.cU);
             }
-            if (inputData.gearType == WormGearTypes.GearTypes.ZT1)
+            if (inputData.gearType == WormGearTypes.ZT1)
             {
                 calculatedData.gammaU = calculatedData.gamma;
             }
