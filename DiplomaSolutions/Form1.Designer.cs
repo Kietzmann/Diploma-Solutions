@@ -291,7 +291,7 @@ namespace DiplomaSolutions
             this.tabControl1.Location = new System.Drawing.Point(2, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(679, 680);
+            this.tabControl1.Size = new System.Drawing.Size(649, 639);
             this.tabControl1.TabIndex = 0;
             // 
             // Parameters
@@ -301,14 +301,14 @@ namespace DiplomaSolutions
             this.Parameters.Location = new System.Drawing.Point(4, 22);
             this.Parameters.Name = "Parameters";
             this.Parameters.Padding = new System.Windows.Forms.Padding(3);
-            this.Parameters.Size = new System.Drawing.Size(671, 654);
+            this.Parameters.Size = new System.Drawing.Size(641, 613);
             this.Parameters.TabIndex = 0;
             this.Parameters.Text = "Вхідні дані";
             this.Parameters.UseVisualStyleBackColor = true;
             // 
             // Calculate
             // 
-            this.Calculate.Location = new System.Drawing.Point(552, 622);
+            this.Calculate.Location = new System.Drawing.Point(546, 588);
             this.Calculate.Name = "Calculate";
             this.Calculate.Size = new System.Drawing.Size(93, 23);
             this.Calculate.TabIndex = 2;
@@ -321,7 +321,6 @@ namespace DiplomaSolutions
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.AutoScroll = true;
             this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
@@ -367,7 +366,6 @@ namespace DiplomaSolutions
             this.tableLayoutPanel1.Controls.Add(this.normalContureBox, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.label94, 0, 18);
             this.tableLayoutPanel1.Controls.Add(this.panel39, 1, 18);
-            this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 19;
@@ -390,6 +388,7 @@ namespace DiplomaSolutions
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(633, 579);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -2505,7 +2504,7 @@ namespace DiplomaSolutions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 680);
+            this.ClientSize = new System.Drawing.Size(651, 642);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";

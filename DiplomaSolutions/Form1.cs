@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace DiplomaSolutions
@@ -44,6 +45,84 @@ namespace DiplomaSolutions
 
         private void Calculate_Click(object sender, EventArgs e)
         {
+            var input = new InputData();
+            input.gearType = gearData.SelectedText;
+            double tmp;
+            int temp, temp2, temp3;
+            input.gearType = gearData.SelectedItem.ToString();
+            input.m = double.Parse(moduleBox.SelectedItem.ToString().Replace('.', ','));
+            input.q = double.Parse(diameterBOx.SelectedItem.ToString().Replace('.', ','));
+            if (int.TryParse(textBox1.Text, out temp))
+            {
+                input.z1 = temp;
+            }
+            temp = 0;
+            if (int.TryParse(textBox2.Text, out temp))
+            {
+                input.z2 = temp;
+                
+            }
+            if (int.TryParse(textBox3.Text, out temp))
+            {
+                if (int.TryParse(textBox4.Text, out temp2) || textBox4.Text == "" || textBox4.Text == null)
+                {
+                    if (int.TryParse(textBox5.Text, out temp3) || textBox5.Text == "" || textBox5.Text == null)
+                    {
+                        input.alphaX = temp*0.01745329 + temp2*0.00029088 + temp3*0.00000048;
+                    }
+                }
+            }
+            if (double.TryParse(textBox6.Text.Replace('.', ','), out tmp))
+            {
+                input.h1 = tmp;
+            }
+            if (double.TryParse(textBox7.Text.Replace('.', ','), out tmp))
+            {
+                input.hAstrxAL = tmp;
+            }
+            if (double.TryParse(textBox8.Text.Replace('.', ','), out tmp))
+            {
+                input.c1 = tmp;
+            }
+            if (double.TryParse(textBox9.Text.Replace('.', ','), out tmp))
+            {
+                input.c2 = tmp;
+            }
+            if (double.TryParse(textBox10.Text.Replace('.', ','), out tmp))
+            {
+                input.sAstrx = tmp;
+            }
+            if (double.TryParse(textBox11.Text.Replace('.', ','), out tmp))
+            {
+                input.RoAstrxF1 = tmp;
+            }
+            if (calcModeBox.SelectedItem.ToString() == "За міжосьовою відстанню")
+            {
+                if (Int32.TryParse(textBox12.Text, out temp))
+                {
+                    input.aW = temp;
+                }
+            }
+            else
+            {
+                if (double.TryParse(textBox13.Text.Replace('.', ','), out tmp))
+                {
+                    input.x = tmp;
+                }
+            }
+            if (double.TryParse(textBox14.Text.Replace('.', ','), out tmp))
+            {
+                input.D = tmp;
+            }
+            if (calcModeBox.SelectedItem.ToString() == "ZT1" || calcModeBox.SelectedItem.ToString() == "ZT2")
+            {
+                if (Int32.TryParse(textBox12.Text, out temp))
+                {
+                    input.Ro = temp;
+                }
+            }
+            Console.WriteLine(input.ToString());
+
         }
 
         private void moduleBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,10 +134,16 @@ namespace DiplomaSolutions
             if (gearData.SelectedItem.ToString() == "ZT1" || gearData.SelectedItem.ToString() == "ZT2")
             {
                 textBox15.ReadOnly = false;
+                tableLayoutPanel1.RowStyles[18].SizeType = SizeType.AutoSize;
+                
+               
             }
             else
             {
-                textBox15.ReadOnly = true;
+                
+                textBox15.ReadOnly = false;
+                tableLayoutPanel1.RowStyles[18].SizeType = SizeType.Absolute;
+                tableLayoutPanel1.RowStyles[18].Height = 0;
             }
             if (gearData.SelectedItem.ToString() == "ZI")
             {
