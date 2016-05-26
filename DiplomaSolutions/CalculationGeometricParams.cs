@@ -57,7 +57,7 @@ namespace DiplomaSolutions
 
         public void calculateMainLiftAngle()
         {
-            if (inputData.gearType == WormGearTypes.ZI)
+            if (inputData.gearType == "ZI")
             {
                 calculatedData.gammaB = Math.Acos(Math.Cos(calculatedData.alphaN)*Math.Cos(calculatedData.gamma));
             }
@@ -70,7 +70,7 @@ namespace DiplomaSolutions
 
         public void calculateAngleAxisCutting()
         {
-            if (inputData.gearType != WormGearTypes.ZA)
+            if (inputData.gearType != "ZA")
             {
                 calculatedData.alphaX = Math.Atan(Math.Tan(inputData.alphaX)/Math.Cos(calculatedData.gamma));
             }
@@ -78,7 +78,7 @@ namespace DiplomaSolutions
 
         public void calculateAngleNormalCutting()
         {
-            if (inputData.gearType == WormGearTypes.ZA)
+            if (inputData.gearType == "ZA")
             {
                 calculatedData.alphaN = Math.Atan(Math.Tan(inputData.alphaX)*Math.Cos(calculatedData.gamma));
             }

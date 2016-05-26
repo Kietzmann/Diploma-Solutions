@@ -75,12 +75,12 @@ namespace DiplomaSolutions
         public void calculateBiggestWormDiameter()
         {
             var K = 2;
-            if (inputData.gearType == WormGearTypes.ZN1 || inputData.gearType == WormGearTypes.ZN2 ||
-                inputData.gearType == WormGearTypes.ZN3)
+            if (inputData.gearType == "ZN1" || inputData.gearType == "ZN2" ||
+                inputData.gearType == "ZN3")
             {
                 K = 1;
             }
-            if (inputData.gearType == WormGearTypes.ZT1 || inputData.gearType == WormGearTypes.ZT2)
+            if (inputData.gearType == "ZT1" || inputData.gearType == "ZT2")
             {
                 K = 4;
             }

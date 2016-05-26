@@ -30,6 +30,5 @@
             thirdCalculation.invokeCalculations();
             fourthCalculation.invokeCalculations();
         }
-
     }
 }

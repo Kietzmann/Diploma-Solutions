@@ -56,7 +56,7 @@ namespace DiplomaSolutions
                                 (calculatedData.p1 - inputData.sAstrx*inputData.m)*Math.Cos(calculatedData.gamma)/
                                 Math.Tan(calculatedData.alphaN) +
                                 calculatedData.D*(1/Math.Sin(calculatedData.alphaN) + 1);
-            if (inputData.gearType == WormGearTypes.ZA)
+            if (inputData.gearType == "ZA")
             {
                 calculatedData.M1 = calculatedData.d1 -
                                     (calculatedData.p1 - inputData.sAstrx*inputData.m)*Math.Cos(calculatedData.gamma)/
