@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="TestCaclulationGeometricParams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestCalculationWormDivisionDiameter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

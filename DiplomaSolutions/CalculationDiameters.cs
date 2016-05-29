@@ -17,7 +17,7 @@ namespace DiplomaSolutions
         public void invokeCalculations()
         {
             calculateWormDivisionDiameter();
-            calculateDivisionDiameterWormGear();
+            calculateDivisionDiameterWormWheel();
             calculateBeginDiameter();
             calculateMainDiameter();
             calculateWormSpinHeight();
@@ -30,18 +30,18 @@ namespace DiplomaSolutions
 
         public void calculateWormDivisionDiameter()
         {
-            calculatedData.d1 = Convert.ToInt32(inputData.q*inputData.m);
+            calculatedData.d1 = inputData.q*inputData.m;
         }
 
-        public void calculateDivisionDiameterWormGear()
+        public void calculateDivisionDiameterWormWheel()
         {
-            calculatedData.d2 = Convert.ToInt32(inputData.z2*inputData.m);
+            calculatedData.d2 = inputData.z2*inputData.m;
         }
 
         public void calculateBeginDiameter()
         {
-            calculatedData.dW1 = Convert.ToInt32((inputData.q + inputData.x*2)*
-                                 inputData.m);
+            calculatedData.dW1 = (inputData.q + inputData.x*2)*
+                                 inputData.m;
         }
 
         public void calculateMainDiameter()
@@ -52,7 +52,7 @@ namespace DiplomaSolutions
 
         public void calculateWormSpinHeight()
         {
-            calculatedData.h1 = inputData.hAstrxAL*inputData.m;
+            calculatedData.h1 = inputData.h1*inputData.m;
         }
 
         public void calculateHeadWormSpinHeight()
