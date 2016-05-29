@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace DiplomaSolutions
@@ -11,37 +10,8 @@ namespace DiplomaSolutions
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void label26_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void label60_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label63_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void label107_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Results_Click(object sender, EventArgs e)
-        {
-        }
+       
+       
 
         private void Calculate_Click(object sender, EventArgs e)
         {
@@ -60,7 +30,6 @@ namespace DiplomaSolutions
             if (int.TryParse(textBox2.Text, out temp))
             {
                 input.z2 = temp;
-                
             }
             if (int.TryParse(textBox3.Text, out temp))
             {
@@ -68,7 +37,7 @@ namespace DiplomaSolutions
                 {
                     if (int.TryParse(textBox5.Text, out temp3) || textBox5.Text == "" || textBox5.Text == null)
                     {
-                        input.alphaX = temp*0.01745329 + temp2*0.00029088 + temp3*0.00000048;
+                        input.alphaN = temp*0.01745329 + temp2*0.00029088 + temp3*0.00000048;
                     }
                 }
             }
@@ -98,7 +67,7 @@ namespace DiplomaSolutions
             }
             if (calcModeBox.SelectedItem.ToString() == "За міжосьовою відстанню")
             {
-                if (Int32.TryParse(textBox12.Text, out temp))
+                if (int.TryParse(textBox12.Text, out temp))
                 {
                     input.aW = temp;
                 }
@@ -116,13 +85,19 @@ namespace DiplomaSolutions
             }
             if (calcModeBox.SelectedItem.ToString() == "ZT1" || calcModeBox.SelectedItem.ToString() == "ZT2")
             {
-                if (Int32.TryParse(textBox12.Text, out temp))
+                if (int.TryParse(textBox12.Text, out temp))
                 {
                     input.Ro = temp;
                 }
             }
-            Console.WriteLine(input.ToString());
 
+
+            Console.WriteLine(input.ToString());
+            CalculatedData finalData = new CalculatedData();
+            OverAllCalculations calculations = new OverAllCalculations(finalData, input);
+            calculations.initializeCalcFunctions();
+            calculations.initializeCalculations();
+            
         }
 
         private void moduleBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,12 +110,9 @@ namespace DiplomaSolutions
             {
                 textBox15.ReadOnly = false;
                 tableLayoutPanel1.RowStyles[18].SizeType = SizeType.AutoSize;
-                
-               
             }
             else
             {
-                
                 textBox15.ReadOnly = false;
                 tableLayoutPanel1.RowStyles[18].SizeType = SizeType.Absolute;
                 tableLayoutPanel1.RowStyles[18].Height = 0;

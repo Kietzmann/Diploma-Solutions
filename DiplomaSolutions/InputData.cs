@@ -2,7 +2,7 @@ namespace DiplomaSolutions
 {
     public class InputData
     {
-        public double alphaX;
+        public double alphaN;
         public int aW;
         public double c1;
         public double c2;
@@ -21,7 +21,7 @@ namespace DiplomaSolutions
 
         public override string ToString()
         {
-            return $"AlphaX: {alphaX}, AW: {aW}, C1: {c1}, C2: {c2}, D: {D}, GearType: {gearType}, H1: {h1}, HAstrxAl: {hAstrxAL}, M: {m}, Q: {q}, Ro: {Ro}, RoAstrxF1: {RoAstrxF1}, SAstrx: {sAstrx}, X: {x}, Z1: {z1}, Z2: {z2}";
+            return $"AlphaX: {alphaN}, AW: {aW}, C1: {c1}, C2: {c2}, D: {D}, GearType: {gearType}, H1: {h1}, HAstrxAl: {hAstrxAL}, M: {m}, Q: {q}, Ro: {Ro}, RoAstrxF1: {RoAstrxF1}, SAstrx: {sAstrx}, X: {x}, Z1: {z1}, Z2: {z2}";
         }
     }
 }

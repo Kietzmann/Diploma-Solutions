@@ -843,7 +843,7 @@ namespace DiplomaSolutions
             this.label26.TabIndex = 0;
             this.label26.Text = "q =";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label26.Click += new System.EventHandler(this.label26_Click);
+           
             // 
             // diameterBOx
             // 
@@ -1229,7 +1229,7 @@ namespace DiplomaSolutions
             this.Results.TabIndex = 1;
             this.Results.Text = "Результати розрахунку";
             this.Results.UseVisualStyleBackColor = true;
-            this.Results.Click += new System.EventHandler(this.Results_Click);
+           
             // 
             // tableLayoutPanel3
             // 
@@ -1425,7 +1425,7 @@ namespace DiplomaSolutions
             this.label107.TabIndex = 2;
             this.label107.Text = "Хід витка, мм";
             this.label107.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label107.Click += new System.EventHandler(this.label107_Click);
+           
             // 
             // label108
             // 
@@ -1542,7 +1542,7 @@ namespace DiplomaSolutions
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(549, 458);
             this.tableLayoutPanel2.TabIndex = 0;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
+   
             // 
             // label88
             // 
@@ -2275,7 +2275,7 @@ namespace DiplomaSolutions
             this.label60.Size = new System.Drawing.Size(33, 13);
             this.label60.TabIndex = 0;
             this.label60.Text = "aw = ";
-            this.label60.Click += new System.EventHandler(this.label60_Click);
+            
             // 
             // panel18
             // 
@@ -2316,7 +2316,7 @@ namespace DiplomaSolutions
             this.label63.Size = new System.Drawing.Size(9, 13);
             this.label63.TabIndex = 4;
             this.label63.Text = "\'";
-            this.label63.Click += new System.EventHandler(this.label63_Click);
+            
             // 
             // richTextBox5
             // 

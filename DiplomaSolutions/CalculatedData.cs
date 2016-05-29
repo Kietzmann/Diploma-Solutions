@@ -44,5 +44,10 @@ namespace DiplomaSolutions
         //unknown yet
         public double z2;
         public double x;
+
+        public override string ToString()
+        {
+            return $"AlphaN: {alphaN}, AlphaW: {alphaW}, B1: {b1}, B2: {b2}, CU: {cU}, D: {D}, D1: {d1}, D2: {d2}, DA1: {dA1}, DA2: {dA2}, DAe2: {dAE2}, DB: {dB}, DW1: {dW1}, Gamma: {gamma}, GammaB: {gammaB}, GammaU: {gammaU}, H1: {h1}, Ha1: {ha1}, HAl: {hAL}, M1: {M1}, GammaOmega: {gammaOmega}, AlphaX: {alphaX}, P1: {p1}, Pz1: {pz1}, RK: {rK}, RoF1: {RoF1}, Sa1: {sa1}, U: {u}, UCurr: {uCurr}, XMax: {xMax}, XMin: {xMin}, Z2: {z2}, X: {x}";
+        }
     }
 }
