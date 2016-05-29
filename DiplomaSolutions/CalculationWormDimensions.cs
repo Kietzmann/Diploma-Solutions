@@ -59,15 +59,14 @@ namespace DiplomaSolutions
 
         public void calculateNotchRadius()
         {
-            //TODO: ask about ha1
-            calculatedData.rK = 0.5*calculatedData.d1 - calculatedData.hAL;
+            calculatedData.rK = 0.5*calculatedData.d1 - 5;
         }
 
         public void calculateAxisToCenterDistance()
         {
             if (inputData.gearType == "ZT1" || inputData.gearType == "ZT2")
             {
-                calculatedData.cU = calculatedData.d1/2.0 + inputData.Ro*Math.Sin(calculatedData.alphaN);
+                calculatedData.cU = calculatedData.d1/2.0 + inputData.Ro*Math.Sin(inputData.alphaN);
             }
         }
 
