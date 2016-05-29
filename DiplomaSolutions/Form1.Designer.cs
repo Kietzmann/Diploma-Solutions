@@ -66,7 +66,6 @@ namespace DiplomaSolutions
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.gearData = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
             this.moduleBox = new System.Windows.Forms.ComboBox();
@@ -74,8 +73,8 @@ namespace DiplomaSolutions
             this.label26 = new System.Windows.Forms.Label();
             this.diameterBOx = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.BoxZ1 = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -107,11 +106,12 @@ namespace DiplomaSolutions
             this.button4 = new System.Windows.Forms.Button();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.normalContureBox = new System.Windows.Forms.ComboBox();
             this.label94 = new System.Windows.Forms.Label();
             this.panel39 = new System.Windows.Forms.Panel();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
+            this.normalContureBox = new System.Windows.Forms.ComboBox();
+            this.gearData = new System.Windows.Forms.ComboBox();
             this.Results = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel38 = new System.Windows.Forms.Panel();
@@ -137,6 +137,13 @@ namespace DiplomaSolutions
             this.label87 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.richTextBox34 = new System.Windows.Forms.RichTextBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
             this.label88 = new System.Windows.Forms.Label();
             this.panel30 = new System.Windows.Forms.Panel();
             this.richTextBox25 = new System.Windows.Forms.RichTextBox();
@@ -204,9 +211,6 @@ namespace DiplomaSolutions
             this.panel15 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label58 = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label59 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.label60 = new System.Windows.Forms.Label();
@@ -232,6 +236,15 @@ namespace DiplomaSolutions
             this.panel34 = new System.Windows.Forms.Panel();
             this.richTextBox26 = new System.Windows.Forms.RichTextBox();
             this.label86 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.label98 = new System.Windows.Forms.Label();
+            this.richTextBox31 = new System.Windows.Forms.RichTextBox();
+            this.label99 = new System.Windows.Forms.Label();
+            this.richTextBox32 = new System.Windows.Forms.RichTextBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.richTextBox33 = new System.Windows.Forms.RichTextBox();
+            this.label101 = new System.Windows.Forms.Label();
             this.CalculationScheme = new System.Windows.Forms.TabPage();
             this.CalculationMethod = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
@@ -260,6 +273,8 @@ namespace DiplomaSolutions
             this.panel35.SuspendLayout();
             this.panel50.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel41.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panel33.SuspendLayout();
@@ -274,12 +289,12 @@ namespace DiplomaSolutions
             this.panel21.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel29.SuspendLayout();
             this.panel34.SuspendLayout();
+            this.panel40.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -291,7 +306,7 @@ namespace DiplomaSolutions
             this.tabControl1.Location = new System.Drawing.Point(2, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(649, 639);
+            this.tabControl1.Size = new System.Drawing.Size(651, 694);
             this.tabControl1.TabIndex = 0;
             // 
             // Parameters
@@ -301,14 +316,14 @@ namespace DiplomaSolutions
             this.Parameters.Location = new System.Drawing.Point(4, 22);
             this.Parameters.Name = "Parameters";
             this.Parameters.Padding = new System.Windows.Forms.Padding(3);
-            this.Parameters.Size = new System.Drawing.Size(641, 613);
+            this.Parameters.Size = new System.Drawing.Size(643, 668);
             this.Parameters.TabIndex = 0;
             this.Parameters.Text = "Вхідні дані";
             this.Parameters.UseVisualStyleBackColor = true;
             // 
             // Calculate
             // 
-            this.Calculate.Location = new System.Drawing.Point(546, 588);
+            this.Calculate.Location = new System.Drawing.Point(544, 583);
             this.Calculate.Name = "Calculate";
             this.Calculate.Size = new System.Drawing.Size(93, 23);
             this.Calculate.TabIndex = 2;
@@ -350,7 +365,6 @@ namespace DiplomaSolutions
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.label3, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gearData, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 5);
@@ -363,33 +377,33 @@ namespace DiplomaSolutions
             this.tableLayoutPanel1.Controls.Add(this.panel12, 1, 15);
             this.tableLayoutPanel1.Controls.Add(this.panel13, 1, 16);
             this.tableLayoutPanel1.Controls.Add(this.panel14, 1, 17);
-            this.tableLayoutPanel1.Controls.Add(this.normalContureBox, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.label94, 0, 18);
             this.tableLayoutPanel1.Controls.Add(this.panel39, 1, 18);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.normalContureBox, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.gearData, 1, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 19;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(633, 579);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(633, 571);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label1
@@ -400,7 +414,7 @@ namespace DiplomaSolutions
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(363, 13);
+            this.label1.Size = new System.Drawing.Size(363, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Параметр";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -410,9 +424,9 @@ namespace DiplomaSolutions
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 15);
+            this.label2.Location = new System.Drawing.Point(4, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 27);
+            this.label2.Size = new System.Drawing.Size(72, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Вид черв\'яка";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -422,9 +436,9 @@ namespace DiplomaSolutions
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 43);
+            this.label4.Location = new System.Drawing.Point(4, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 27);
+            this.label4.Size = new System.Drawing.Size(105, 29);
             this.label4.TabIndex = 3;
             this.label4.Text = "Варіант розрахунку";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -434,9 +448,9 @@ namespace DiplomaSolutions
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 71);
+            this.label5.Location = new System.Drawing.Point(4, 91);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 31);
+            this.label5.Size = new System.Drawing.Size(67, 29);
             this.label5.TabIndex = 4;
             this.label5.Text = "Модуль, мм";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -446,9 +460,9 @@ namespace DiplomaSolutions
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 103);
+            this.label6.Location = new System.Drawing.Point(4, 121);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 31);
+            this.label6.Size = new System.Drawing.Size(154, 29);
             this.label6.TabIndex = 5;
             this.label6.Text = "Коефіціент діаметру черв\'яка";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -458,9 +472,9 @@ namespace DiplomaSolutions
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 135);
+            this.label7.Location = new System.Drawing.Point(4, 151);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 31);
+            this.label7.Size = new System.Drawing.Size(119, 29);
             this.label7.TabIndex = 6;
             this.label7.Text = "Число витків черв\'яка";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -470,9 +484,9 @@ namespace DiplomaSolutions
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(4, 167);
+            this.label8.Location = new System.Drawing.Point(4, 181);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 31);
+            this.label8.Size = new System.Drawing.Size(106, 29);
             this.label8.TabIndex = 7;
             this.label8.Text = "Число зубів колеса";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -482,9 +496,9 @@ namespace DiplomaSolutions
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 199);
+            this.label9.Location = new System.Drawing.Point(4, 211);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(154, 27);
+            this.label9.Size = new System.Drawing.Size(154, 29);
             this.label9.TabIndex = 8;
             this.label9.Text = "Нормальний вихідний контур";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -494,9 +508,9 @@ namespace DiplomaSolutions
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(4, 227);
+            this.label10.Location = new System.Drawing.Point(4, 241);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 31);
+            this.label10.Size = new System.Drawing.Size(107, 29);
             this.label10.TabIndex = 9;
             this.label10.Text = "Кут профіля, градус";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -506,9 +520,9 @@ namespace DiplomaSolutions
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(4, 259);
+            this.label11.Location = new System.Drawing.Point(4, 271);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(131, 31);
+            this.label11.Size = new System.Drawing.Size(131, 29);
             this.label11.TabIndex = 10;
             this.label11.Text = "Коефіціент висоти витка";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -518,9 +532,9 @@ namespace DiplomaSolutions
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 291);
+            this.label12.Location = new System.Drawing.Point(4, 301);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(175, 31);
+            this.label12.Size = new System.Drawing.Size(175, 29);
             this.label12.TabIndex = 11;
             this.label12.Text = "Коефіціент висоти головки витка";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -530,9 +544,9 @@ namespace DiplomaSolutions
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(4, 323);
+            this.label13.Location = new System.Drawing.Point(4, 331);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(308, 31);
+            this.label13.Size = new System.Drawing.Size(308, 29);
             this.label13.TabIndex = 12;
             this.label13.Text = "Коефіціент радіального зазору у поверхні впадини черв\'яка";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -542,9 +556,9 @@ namespace DiplomaSolutions
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(4, 355);
+            this.label14.Location = new System.Drawing.Point(4, 361);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(363, 31);
+            this.label14.Size = new System.Drawing.Size(363, 29);
             this.label14.TabIndex = 13;
             this.label14.Text = "Коефіціент радіального зазору у поверхні впадини черв\'ячного колеса";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -554,9 +568,9 @@ namespace DiplomaSolutions
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(4, 387);
+            this.label15.Location = new System.Drawing.Point(4, 391);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(216, 31);
+            this.label15.Size = new System.Drawing.Size(216, 29);
             this.label15.TabIndex = 14;
             this.label15.Text = "Коефіціент розрахункової товщини витка";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -566,9 +580,9 @@ namespace DiplomaSolutions
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(4, 419);
+            this.label16.Location = new System.Drawing.Point(4, 421);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(275, 31);
+            this.label16.Size = new System.Drawing.Size(275, 29);
             this.label16.TabIndex = 15;
             this.label16.Text = "Коефіціент радіуса кривизни перехідної кривої витка";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -580,7 +594,7 @@ namespace DiplomaSolutions
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(4, 451);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(130, 31);
+            this.label17.Size = new System.Drawing.Size(130, 29);
             this.label17.TabIndex = 16;
             this.label17.Text = "Міжосьова відстань, мм";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -590,9 +604,9 @@ namespace DiplomaSolutions
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(4, 483);
+            this.label18.Location = new System.Drawing.Point(4, 481);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(159, 31);
+            this.label18.Size = new System.Drawing.Size(159, 29);
             this.label18.TabIndex = 17;
             this.label18.Text = "Коефіціент зміщення черв\'яка";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -602,9 +616,9 @@ namespace DiplomaSolutions
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(4, 515);
+            this.label19.Location = new System.Drawing.Point(4, 511);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(192, 31);
+            this.label19.Size = new System.Drawing.Size(192, 29);
             this.label19.TabIndex = 18;
             this.label19.Text = "Діаметр вимірювальних роликів, мм";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -617,7 +631,7 @@ namespace DiplomaSolutions
             this.calcModeBox.Items.AddRange(new object[] {
             "За міжосьовою відстанню",
             "За коефіціентом зміщення черв\'яка"});
-            this.calcModeBox.Location = new System.Drawing.Point(401, 46);
+            this.calcModeBox.Location = new System.Drawing.Point(401, 64);
             this.calcModeBox.Name = "calcModeBox";
             this.calcModeBox.Size = new System.Drawing.Size(201, 21);
             this.calcModeBox.TabIndex = 20;
@@ -632,9 +646,9 @@ namespace DiplomaSolutions
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label20);
-            this.panel1.Location = new System.Drawing.Point(374, 230);
+            this.panel1.Location = new System.Drawing.Point(374, 244);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 25);
+            this.panel1.Size = new System.Drawing.Size(200, 23);
             this.panel1.TabIndex = 26;
             // 
             // label23
@@ -699,9 +713,9 @@ namespace DiplomaSolutions
             // 
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.label24);
-            this.panel2.Location = new System.Drawing.Point(374, 262);
+            this.panel2.Location = new System.Drawing.Point(374, 274);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 25);
+            this.panel2.Size = new System.Drawing.Size(200, 23);
             this.panel2.TabIndex = 27;
             // 
             // textBox6
@@ -728,41 +742,18 @@ namespace DiplomaSolutions
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(374, 1);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 13);
+            this.label3.Size = new System.Drawing.Size(255, 29);
             this.label3.TabIndex = 2;
             this.label3.Text = "Значення";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // gearData
-            // 
-            this.gearData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.gearData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gearData.FormattingEnabled = true;
-            this.gearData.Items.AddRange(new object[] {
-            "ZA",
-            "ZI",
-            "ZN1",
-            "ZN2",
-            "ZN3",
-            "ZK1",
-            "ZK2",
-            "ZK3",
-            "ZK4",
-            "ZT1",
-            "ZT2"});
-            this.gearData.Location = new System.Drawing.Point(479, 18);
-            this.gearData.Name = "gearData";
-            this.gearData.Size = new System.Drawing.Size(45, 21);
-            this.gearData.TabIndex = 19;
-            this.gearData.SelectedIndexChanged += new System.EventHandler(this.gearData_SelectedIndexChanged);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label25);
             this.panel3.Controls.Add(this.moduleBox);
-            this.panel3.Location = new System.Drawing.Point(374, 74);
+            this.panel3.Location = new System.Drawing.Point(374, 94);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(255, 25);
+            this.panel3.Size = new System.Drawing.Size(255, 23);
             this.panel3.TabIndex = 28;
             // 
             // label25
@@ -827,9 +818,9 @@ namespace DiplomaSolutions
             // 
             this.panel4.Controls.Add(this.label26);
             this.panel4.Controls.Add(this.diameterBOx);
-            this.panel4.Location = new System.Drawing.Point(374, 106);
+            this.panel4.Location = new System.Drawing.Point(374, 124);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 25);
+            this.panel4.Size = new System.Drawing.Size(200, 23);
             this.panel4.TabIndex = 29;
             // 
             // label26
@@ -843,7 +834,6 @@ namespace DiplomaSolutions
             this.label26.TabIndex = 0;
             this.label26.Text = "q =";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-           
             // 
             // diameterBOx
             // 
@@ -872,12 +862,27 @@ namespace DiplomaSolutions
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.BoxZ1);
             this.panel5.Controls.Add(this.label27);
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Location = new System.Drawing.Point(374, 138);
+            this.panel5.Location = new System.Drawing.Point(374, 154);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 25);
+            this.panel5.Size = new System.Drawing.Size(200, 23);
             this.panel5.TabIndex = 30;
+            // 
+            // BoxZ1
+            // 
+            this.BoxZ1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.BoxZ1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BoxZ1.DropDownWidth = 62;
+            this.BoxZ1.FormattingEnabled = true;
+            this.BoxZ1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "4"});
+            this.BoxZ1.Location = new System.Drawing.Point(67, 0);
+            this.BoxZ1.Name = "BoxZ1";
+            this.BoxZ1.Size = new System.Drawing.Size(63, 21);
+            this.BoxZ1.TabIndex = 1;
             // 
             // label27
             // 
@@ -888,20 +893,13 @@ namespace DiplomaSolutions
             this.label27.TabIndex = 0;
             this.label27.Text = "z₁ =";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(68, 1);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(62, 20);
-            this.textBox1.TabIndex = 23;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label28);
             this.panel6.Controls.Add(this.textBox2);
-            this.panel6.Location = new System.Drawing.Point(374, 170);
+            this.panel6.Location = new System.Drawing.Point(374, 184);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 25);
+            this.panel6.Size = new System.Drawing.Size(200, 23);
             this.panel6.TabIndex = 31;
             // 
             // label28
@@ -925,9 +923,9 @@ namespace DiplomaSolutions
             this.panel7.Controls.Add(this.button1);
             this.panel7.Controls.Add(this.textBox7);
             this.panel7.Controls.Add(this.label29);
-            this.panel7.Location = new System.Drawing.Point(374, 294);
+            this.panel7.Location = new System.Drawing.Point(374, 304);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(255, 25);
+            this.panel7.Size = new System.Drawing.Size(255, 23);
             this.panel7.TabIndex = 32;
             // 
             // button1
@@ -960,9 +958,9 @@ namespace DiplomaSolutions
             // 
             this.panel8.Controls.Add(this.textBox8);
             this.panel8.Controls.Add(this.label30);
-            this.panel8.Location = new System.Drawing.Point(374, 326);
+            this.panel8.Location = new System.Drawing.Point(374, 334);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(200, 25);
+            this.panel8.Size = new System.Drawing.Size(200, 23);
             this.panel8.TabIndex = 33;
             // 
             // textBox8
@@ -985,9 +983,9 @@ namespace DiplomaSolutions
             // 
             this.panel9.Controls.Add(this.textBox9);
             this.panel9.Controls.Add(this.label31);
-            this.panel9.Location = new System.Drawing.Point(374, 358);
+            this.panel9.Location = new System.Drawing.Point(374, 364);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(200, 25);
+            this.panel9.Size = new System.Drawing.Size(200, 23);
             this.panel9.TabIndex = 34;
             // 
             // textBox9
@@ -1010,9 +1008,9 @@ namespace DiplomaSolutions
             // 
             this.panel10.Controls.Add(this.textBox10);
             this.panel10.Controls.Add(this.label32);
-            this.panel10.Location = new System.Drawing.Point(374, 390);
+            this.panel10.Location = new System.Drawing.Point(374, 394);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(200, 25);
+            this.panel10.Size = new System.Drawing.Size(200, 23);
             this.panel10.TabIndex = 35;
             // 
             // textBox10
@@ -1035,9 +1033,9 @@ namespace DiplomaSolutions
             // 
             this.panel11.Controls.Add(this.textBox11);
             this.panel11.Controls.Add(this.label33);
-            this.panel11.Location = new System.Drawing.Point(374, 422);
+            this.panel11.Location = new System.Drawing.Point(374, 424);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(200, 25);
+            this.panel11.Size = new System.Drawing.Size(200, 23);
             this.panel11.TabIndex = 36;
             // 
             // textBox11
@@ -1063,7 +1061,7 @@ namespace DiplomaSolutions
             this.panel12.Controls.Add(this.label34);
             this.panel12.Location = new System.Drawing.Point(374, 454);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(255, 25);
+            this.panel12.Size = new System.Drawing.Size(255, 23);
             this.panel12.TabIndex = 37;
             // 
             // button2
@@ -1096,9 +1094,9 @@ namespace DiplomaSolutions
             this.panel13.Controls.Add(this.button3);
             this.panel13.Controls.Add(this.textBox13);
             this.panel13.Controls.Add(this.label35);
-            this.panel13.Location = new System.Drawing.Point(374, 486);
+            this.panel13.Location = new System.Drawing.Point(374, 484);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(255, 25);
+            this.panel13.Size = new System.Drawing.Size(255, 23);
             this.panel13.TabIndex = 38;
             // 
             // button3
@@ -1132,9 +1130,9 @@ namespace DiplomaSolutions
             this.panel14.Controls.Add(this.button4);
             this.panel14.Controls.Add(this.textBox14);
             this.panel14.Controls.Add(this.label36);
-            this.panel14.Location = new System.Drawing.Point(374, 518);
+            this.panel14.Location = new System.Drawing.Point(374, 514);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(255, 25);
+            this.panel14.Size = new System.Drawing.Size(255, 23);
             this.panel14.TabIndex = 39;
             // 
             // button4
@@ -1163,28 +1161,14 @@ namespace DiplomaSolutions
             this.label36.TabIndex = 0;
             this.label36.Text = "D =";
             // 
-            // normalContureBox
-            // 
-            this.normalContureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.normalContureBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.normalContureBox.FormattingEnabled = true;
-            this.normalContureBox.Items.AddRange(new object[] {
-            "По ГОСТ 19034-94",
-            "Нестандартний"});
-            this.normalContureBox.Location = new System.Drawing.Point(441, 202);
-            this.normalContureBox.Name = "normalContureBox";
-            this.normalContureBox.Size = new System.Drawing.Size(121, 21);
-            this.normalContureBox.TabIndex = 25;
-            this.normalContureBox.SelectedIndexChanged += new System.EventHandler(this.normalContureBox_SelectedIndexChanged);
-            // 
             // label94
             // 
             this.label94.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(4, 547);
+            this.label94.Location = new System.Drawing.Point(4, 541);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(233, 31);
+            this.label94.Size = new System.Drawing.Size(233, 29);
             this.label94.TabIndex = 40;
             this.label94.Text = "Радіус твірної дуги шліфувального круга, мм";
             this.label94.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1193,9 +1177,9 @@ namespace DiplomaSolutions
             // 
             this.panel39.Controls.Add(this.textBox15);
             this.panel39.Controls.Add(this.label95);
-            this.panel39.Location = new System.Drawing.Point(374, 550);
+            this.panel39.Location = new System.Drawing.Point(374, 544);
             this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(255, 25);
+            this.panel39.Size = new System.Drawing.Size(255, 23);
             this.panel39.TabIndex = 39;
             // 
             // textBox15
@@ -1215,9 +1199,45 @@ namespace DiplomaSolutions
             this.label95.TabIndex = 2;
             this.label95.Text = "ρ =";
             // 
+            // normalContureBox
+            // 
+            this.normalContureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.normalContureBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.normalContureBox.FormattingEnabled = true;
+            this.normalContureBox.Items.AddRange(new object[] {
+            "По ГОСТ 19034-94",
+            "Нестандартний"});
+            this.normalContureBox.Location = new System.Drawing.Point(441, 214);
+            this.normalContureBox.Name = "normalContureBox";
+            this.normalContureBox.Size = new System.Drawing.Size(121, 21);
+            this.normalContureBox.TabIndex = 25;
+            this.normalContureBox.SelectedIndexChanged += new System.EventHandler(this.normalContureBox_SelectedIndexChanged);
+            // 
+            // gearData
+            // 
+            this.gearData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.gearData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gearData.FormattingEnabled = true;
+            this.gearData.Items.AddRange(new object[] {
+            "ZA",
+            "ZI",
+            "ZN1",
+            "ZN2",
+            "ZN3",
+            "ZK1",
+            "ZK2",
+            "ZK3",
+            "ZK4",
+            "ZT1",
+            "ZT2"});
+            this.gearData.Location = new System.Drawing.Point(470, 34);
+            this.gearData.Name = "gearData";
+            this.gearData.Size = new System.Drawing.Size(62, 21);
+            this.gearData.TabIndex = 19;
+            this.gearData.SelectedIndexChanged += new System.EventHandler(this.gearData_SelectedIndexChanged);
+            // 
             // Results
             // 
-            this.Results.AutoScroll = true;
             this.Results.Controls.Add(this.tableLayoutPanel3);
             this.Results.Controls.Add(this.label87);
             this.Results.Controls.Add(this.label57);
@@ -1225,20 +1245,19 @@ namespace DiplomaSolutions
             this.Results.Location = new System.Drawing.Point(4, 22);
             this.Results.Name = "Results";
             this.Results.Padding = new System.Windows.Forms.Padding(3);
-            this.Results.Size = new System.Drawing.Size(671, 654);
+            this.Results.Size = new System.Drawing.Size(643, 668);
             this.Results.TabIndex = 1;
             this.Results.Text = "Результати розрахунку";
             this.Results.UseVisualStyleBackColor = true;
-           
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.AutoSize = true;
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.panel38, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.panel37, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.panel36, 1, 2);
@@ -1249,7 +1268,7 @@ namespace DiplomaSolutions
             this.tableLayoutPanel3.Controls.Add(this.label107, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label108, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.label89, 0, 3);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(24, 503);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(113, 541);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 5;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
@@ -1257,7 +1276,7 @@ namespace DiplomaSolutions
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(549, 121);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(413, 121);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // panel38
@@ -1273,6 +1292,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox30.Location = new System.Drawing.Point(39, -1);
             this.richTextBox30.Name = "richTextBox30";
+            this.richTextBox30.ReadOnly = true;
             this.richTextBox30.Size = new System.Drawing.Size(95, 20);
             this.richTextBox30.TabIndex = 1;
             this.richTextBox30.Text = "";
@@ -1299,6 +1319,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox29.Location = new System.Drawing.Point(39, -1);
             this.richTextBox29.Name = "richTextBox29";
+            this.richTextBox29.ReadOnly = true;
             this.richTextBox29.Size = new System.Drawing.Size(95, 20);
             this.richTextBox29.TabIndex = 1;
             this.richTextBox29.Text = "";
@@ -1325,6 +1346,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox28.Location = new System.Drawing.Point(39, -1);
             this.richTextBox28.Name = "richTextBox28";
+            this.richTextBox28.ReadOnly = true;
             this.richTextBox28.Size = new System.Drawing.Size(95, 20);
             this.richTextBox28.TabIndex = 1;
             this.richTextBox28.Text = "";
@@ -1351,6 +1373,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox27.Location = new System.Drawing.Point(39, -1);
             this.richTextBox27.Name = "richTextBox27";
+            this.richTextBox27.ReadOnly = true;
             this.richTextBox27.Size = new System.Drawing.Size(95, 20);
             this.richTextBox27.TabIndex = 1;
             this.richTextBox27.Text = "";
@@ -1389,6 +1412,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox44.Location = new System.Drawing.Point(39, -1);
             this.richTextBox44.Name = "richTextBox44";
+            this.richTextBox44.ReadOnly = true;
             this.richTextBox44.Size = new System.Drawing.Size(95, 20);
             this.richTextBox44.TabIndex = 1;
             this.richTextBox44.Text = "";
@@ -1425,7 +1449,6 @@ namespace DiplomaSolutions
             this.label107.TabIndex = 2;
             this.label107.Text = "Хід витка, мм";
             this.label107.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-           
             // 
             // label108
             // 
@@ -1454,7 +1477,7 @@ namespace DiplomaSolutions
             // label87
             // 
             this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(109, 481);
+            this.label87.Location = new System.Drawing.Point(133, 527);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(381, 13);
             this.label87.TabIndex = 3;
@@ -1472,55 +1495,59 @@ namespace DiplomaSolutions
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.AutoSize = true;
+            this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Controls.Add(this.label88, 0, 19);
-            this.tableLayoutPanel2.Controls.Add(this.panel30, 2, 18);
-            this.tableLayoutPanel2.Controls.Add(this.panel28, 1, 17);
-            this.tableLayoutPanel2.Controls.Add(this.panel33, 2, 15);
-            this.tableLayoutPanel2.Controls.Add(this.panel32, 2, 14);
-            this.tableLayoutPanel2.Controls.Add(this.panel27, 1, 14);
-            this.tableLayoutPanel2.Controls.Add(this.panel26, 1, 13);
-            this.tableLayoutPanel2.Controls.Add(this.panel25, 1, 12);
-            this.tableLayoutPanel2.Controls.Add(this.panel24, 1, 11);
-            this.tableLayoutPanel2.Controls.Add(this.panel31, 2, 10);
-            this.tableLayoutPanel2.Controls.Add(this.panel23, 1, 10);
-            this.tableLayoutPanel2.Controls.Add(this.panel22, 1, 9);
-            this.tableLayoutPanel2.Controls.Add(this.panel21, 1, 8);
-            this.tableLayoutPanel2.Controls.Add(this.panel20, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.label37, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label38, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label39, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label40, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label41, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label42, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label43, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.label44, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.label45, 0, 8);
-            this.tableLayoutPanel2.Controls.Add(this.label46, 0, 9);
-            this.tableLayoutPanel2.Controls.Add(this.label47, 0, 10);
-            this.tableLayoutPanel2.Controls.Add(this.label48, 0, 11);
-            this.tableLayoutPanel2.Controls.Add(this.label49, 0, 12);
-            this.tableLayoutPanel2.Controls.Add(this.label50, 0, 13);
-            this.tableLayoutPanel2.Controls.Add(this.label51, 0, 14);
-            this.tableLayoutPanel2.Controls.Add(this.label52, 0, 15);
-            this.tableLayoutPanel2.Controls.Add(this.label53, 0, 16);
-            this.tableLayoutPanel2.Controls.Add(this.label54, 0, 17);
-            this.tableLayoutPanel2.Controls.Add(this.label55, 0, 18);
-            this.tableLayoutPanel2.Controls.Add(this.panel15, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.panel16, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.panel17, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.panel18, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.panel19, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.panel29, 1, 16);
-            this.tableLayoutPanel2.Controls.Add(this.panel34, 1, 19);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 19);
+            this.tableLayoutPanel2.Controls.Add(this.panel16, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.panel41, 1, 19);
+            this.tableLayoutPanel2.Controls.Add(this.label97, 0, 20);
+            this.tableLayoutPanel2.Controls.Add(this.label88, 0, 18);
+            this.tableLayoutPanel2.Controls.Add(this.panel30, 2, 17);
+            this.tableLayoutPanel2.Controls.Add(this.panel28, 1, 16);
+            this.tableLayoutPanel2.Controls.Add(this.panel33, 2, 14);
+            this.tableLayoutPanel2.Controls.Add(this.panel32, 2, 13);
+            this.tableLayoutPanel2.Controls.Add(this.panel27, 1, 13);
+            this.tableLayoutPanel2.Controls.Add(this.panel26, 1, 12);
+            this.tableLayoutPanel2.Controls.Add(this.panel25, 1, 11);
+            this.tableLayoutPanel2.Controls.Add(this.panel24, 1, 10);
+            this.tableLayoutPanel2.Controls.Add(this.panel31, 2, 9);
+            this.tableLayoutPanel2.Controls.Add(this.panel23, 1, 9);
+            this.tableLayoutPanel2.Controls.Add(this.panel22, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.panel21, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.panel20, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label37, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label38, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label39, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label40, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label41, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label42, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label43, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label44, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label45, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.label46, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.label47, 0, 9);
+            this.tableLayoutPanel2.Controls.Add(this.label48, 0, 10);
+            this.tableLayoutPanel2.Controls.Add(this.label49, 0, 11);
+            this.tableLayoutPanel2.Controls.Add(this.label50, 0, 12);
+            this.tableLayoutPanel2.Controls.Add(this.label51, 0, 13);
+            this.tableLayoutPanel2.Controls.Add(this.label52, 0, 14);
+            this.tableLayoutPanel2.Controls.Add(this.label53, 0, 15);
+            this.tableLayoutPanel2.Controls.Add(this.label54, 0, 16);
+            this.tableLayoutPanel2.Controls.Add(this.label55, 0, 17);
+            this.tableLayoutPanel2.Controls.Add(this.panel15, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.panel17, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.panel18, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.panel19, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.panel29, 1, 15);
+            this.tableLayoutPanel2.Controls.Add(this.panel34, 1, 18);
+            this.tableLayoutPanel2.Controls.Add(this.label96, 0, 19);
+            this.tableLayoutPanel2.Controls.Add(this.panel40, 1, 20);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 19);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 16;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowCount = 21;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
@@ -1531,8 +1558,6 @@ namespace DiplomaSolutions
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
@@ -1540,16 +1565,91 @@ namespace DiplomaSolutions
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(549, 458);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(624, 505);
             this.tableLayoutPanel2.TabIndex = 0;
-   
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.SetColumnSpan(this.panel16, 2);
+            this.panel16.Controls.Add(this.richTextBox2);
+            this.panel16.Controls.Add(this.label59);
+            this.panel16.Location = new System.Drawing.Point(326, 49);
+            this.panel16.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(291, 23);
+            this.panel16.TabIndex = 21;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(108, 1);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.Size = new System.Drawing.Size(96, 19);
+            this.richTextBox2.TabIndex = 1;
+            this.richTextBox2.Text = "";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(3, 4);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(22, 13);
+            this.label59.TabIndex = 0;
+            this.label59.Text = "u =";
+            // 
+            // panel41
+            // 
+            this.panel41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel41.AutoSize = true;
+            this.panel41.Controls.Add(this.richTextBox34);
+            this.panel41.Controls.Add(this.label102);
+            this.panel41.Location = new System.Drawing.Point(326, 460);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(151, 17);
+            this.panel41.TabIndex = 32;
+            // 
+            // richTextBox34
+            // 
+            this.richTextBox34.Location = new System.Drawing.Point(38, -1);
+            this.richTextBox34.Name = "richTextBox34";
+            this.richTextBox34.ReadOnly = true;
+            this.richTextBox34.Size = new System.Drawing.Size(95, 23);
+            this.richTextBox34.TabIndex = 1;
+            this.richTextBox34.Text = "";
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(4, 4);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(26, 13);
+            this.label102.TabIndex = 0;
+            this.label102.Text = "cᵤ =";
+            // 
+            // label97
+            // 
+            this.label97.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label97.AutoSize = true;
+            this.label97.Location = new System.Drawing.Point(4, 481);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(282, 23);
+            this.label97.TabIndex = 30;
+            this.label97.Text = "Кут схрещування осей черв\'яка і шліфувального круга";
+            this.label97.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label88
             // 
             this.label88.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(4, 434);
+            this.label88.Location = new System.Drawing.Point(4, 433);
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(102, 23);
             this.label88.TabIndex = 20;
@@ -1562,7 +1662,7 @@ namespace DiplomaSolutions
             this.panel30.AutoSize = true;
             this.panel30.Controls.Add(this.richTextBox25);
             this.panel30.Controls.Add(this.label85);
-            this.panel30.Location = new System.Drawing.Point(409, 413);
+            this.panel30.Location = new System.Drawing.Point(484, 412);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(136, 17);
             this.panel30.TabIndex = 26;
@@ -1571,6 +1671,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox25.Location = new System.Drawing.Point(38, -1);
             this.richTextBox25.Name = "richTextBox25";
+            this.richTextBox25.ReadOnly = true;
             this.richTextBox25.Size = new System.Drawing.Size(95, 23);
             this.richTextBox25.TabIndex = 1;
             this.richTextBox25.Text = "";
@@ -1590,7 +1691,7 @@ namespace DiplomaSolutions
             this.panel28.AutoSize = true;
             this.panel28.Controls.Add(this.richTextBox24);
             this.panel28.Controls.Add(this.label84);
-            this.panel28.Location = new System.Drawing.Point(251, 389);
+            this.panel28.Location = new System.Drawing.Point(326, 388);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(151, 17);
             this.panel28.TabIndex = 25;
@@ -1599,6 +1700,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox24.Location = new System.Drawing.Point(38, -1);
             this.richTextBox24.Name = "richTextBox24";
+            this.richTextBox24.ReadOnly = true;
             this.richTextBox24.Size = new System.Drawing.Size(95, 23);
             this.richTextBox24.TabIndex = 1;
             this.richTextBox24.Text = "";
@@ -1618,7 +1720,7 @@ namespace DiplomaSolutions
             this.panel33.AutoSize = true;
             this.panel33.Controls.Add(this.richTextBox22);
             this.panel33.Controls.Add(this.label82);
-            this.panel33.Location = new System.Drawing.Point(409, 341);
+            this.panel33.Location = new System.Drawing.Point(484, 340);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(136, 17);
             this.panel33.TabIndex = 28;
@@ -1627,6 +1729,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox22.Location = new System.Drawing.Point(38, -1);
             this.richTextBox22.Name = "richTextBox22";
+            this.richTextBox22.ReadOnly = true;
             this.richTextBox22.Size = new System.Drawing.Size(95, 23);
             this.richTextBox22.TabIndex = 1;
             this.richTextBox22.Text = "";
@@ -1646,7 +1749,7 @@ namespace DiplomaSolutions
             this.panel32.AutoSize = true;
             this.panel32.Controls.Add(this.richTextBox21);
             this.panel32.Controls.Add(this.label81);
-            this.panel32.Location = new System.Drawing.Point(409, 317);
+            this.panel32.Location = new System.Drawing.Point(484, 316);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(136, 17);
             this.panel32.TabIndex = 27;
@@ -1655,6 +1758,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox21.Location = new System.Drawing.Point(38, -1);
             this.richTextBox21.Name = "richTextBox21";
+            this.richTextBox21.ReadOnly = true;
             this.richTextBox21.Size = new System.Drawing.Size(95, 23);
             this.richTextBox21.TabIndex = 1;
             this.richTextBox21.Text = "";
@@ -1674,7 +1778,7 @@ namespace DiplomaSolutions
             this.panel27.AutoSize = true;
             this.panel27.Controls.Add(this.richTextBox20);
             this.panel27.Controls.Add(this.label80);
-            this.panel27.Location = new System.Drawing.Point(251, 317);
+            this.panel27.Location = new System.Drawing.Point(326, 316);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(151, 17);
             this.panel27.TabIndex = 26;
@@ -1683,6 +1787,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox20.Location = new System.Drawing.Point(38, -1);
             this.richTextBox20.Name = "richTextBox20";
+            this.richTextBox20.ReadOnly = true;
             this.richTextBox20.Size = new System.Drawing.Size(95, 23);
             this.richTextBox20.TabIndex = 1;
             this.richTextBox20.Text = "";
@@ -1702,7 +1807,7 @@ namespace DiplomaSolutions
             this.panel26.AutoSize = true;
             this.panel26.Controls.Add(this.richTextBox19);
             this.panel26.Controls.Add(this.label79);
-            this.panel26.Location = new System.Drawing.Point(251, 293);
+            this.panel26.Location = new System.Drawing.Point(326, 292);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(151, 17);
             this.panel26.TabIndex = 25;
@@ -1711,6 +1816,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox19.Location = new System.Drawing.Point(38, -1);
             this.richTextBox19.Name = "richTextBox19";
+            this.richTextBox19.ReadOnly = true;
             this.richTextBox19.Size = new System.Drawing.Size(95, 23);
             this.richTextBox19.TabIndex = 1;
             this.richTextBox19.Text = "";
@@ -1730,15 +1836,16 @@ namespace DiplomaSolutions
             this.panel25.AutoSize = true;
             this.panel25.Controls.Add(this.richTextBox18);
             this.panel25.Controls.Add(this.label78);
-            this.panel25.Location = new System.Drawing.Point(251, 270);
+            this.panel25.Location = new System.Drawing.Point(326, 268);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(151, 16);
+            this.panel25.Size = new System.Drawing.Size(151, 17);
             this.panel25.TabIndex = 24;
             // 
             // richTextBox18
             // 
             this.richTextBox18.Location = new System.Drawing.Point(38, -1);
             this.richTextBox18.Name = "richTextBox18";
+            this.richTextBox18.ReadOnly = true;
             this.richTextBox18.Size = new System.Drawing.Size(95, 23);
             this.richTextBox18.TabIndex = 1;
             this.richTextBox18.Text = "";
@@ -1758,15 +1865,16 @@ namespace DiplomaSolutions
             this.panel24.AutoSize = true;
             this.panel24.Controls.Add(this.richTextBox17);
             this.panel24.Controls.Add(this.label77);
-            this.panel24.Location = new System.Drawing.Point(251, 245);
+            this.panel24.Location = new System.Drawing.Point(326, 244);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(151, 18);
+            this.panel24.Size = new System.Drawing.Size(151, 17);
             this.panel24.TabIndex = 24;
             // 
             // richTextBox17
             // 
             this.richTextBox17.Location = new System.Drawing.Point(38, -1);
             this.richTextBox17.Name = "richTextBox17";
+            this.richTextBox17.ReadOnly = true;
             this.richTextBox17.Size = new System.Drawing.Size(95, 23);
             this.richTextBox17.TabIndex = 1;
             this.richTextBox17.Text = "";
@@ -1786,7 +1894,7 @@ namespace DiplomaSolutions
             this.panel31.AutoSize = true;
             this.panel31.Controls.Add(this.richTextBox16);
             this.panel31.Controls.Add(this.label76);
-            this.panel31.Location = new System.Drawing.Point(409, 221);
+            this.panel31.Location = new System.Drawing.Point(484, 220);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(136, 17);
             this.panel31.TabIndex = 24;
@@ -1795,6 +1903,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox16.Location = new System.Drawing.Point(38, -1);
             this.richTextBox16.Name = "richTextBox16";
+            this.richTextBox16.ReadOnly = true;
             this.richTextBox16.Size = new System.Drawing.Size(95, 23);
             this.richTextBox16.TabIndex = 1;
             this.richTextBox16.Text = "";
@@ -1814,7 +1923,7 @@ namespace DiplomaSolutions
             this.panel23.AutoSize = true;
             this.panel23.Controls.Add(this.richTextBox15);
             this.panel23.Controls.Add(this.label75);
-            this.panel23.Location = new System.Drawing.Point(251, 221);
+            this.panel23.Location = new System.Drawing.Point(326, 220);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(151, 17);
             this.panel23.TabIndex = 23;
@@ -1823,6 +1932,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox15.Location = new System.Drawing.Point(38, -1);
             this.richTextBox15.Name = "richTextBox15";
+            this.richTextBox15.ReadOnly = true;
             this.richTextBox15.Size = new System.Drawing.Size(95, 23);
             this.richTextBox15.TabIndex = 1;
             this.richTextBox15.Text = "";
@@ -1842,7 +1952,7 @@ namespace DiplomaSolutions
             this.panel22.AutoSize = true;
             this.panel22.Controls.Add(this.richTextBox14);
             this.panel22.Controls.Add(this.label74);
-            this.panel22.Location = new System.Drawing.Point(251, 197);
+            this.panel22.Location = new System.Drawing.Point(326, 196);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(151, 17);
             this.panel22.TabIndex = 22;
@@ -1851,6 +1961,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox14.Location = new System.Drawing.Point(38, -1);
             this.richTextBox14.Name = "richTextBox14";
+            this.richTextBox14.ReadOnly = true;
             this.richTextBox14.Size = new System.Drawing.Size(95, 23);
             this.richTextBox14.TabIndex = 1;
             this.richTextBox14.Text = "";
@@ -1870,7 +1981,7 @@ namespace DiplomaSolutions
             this.panel21.AutoSize = true;
             this.panel21.Controls.Add(this.richTextBox13);
             this.panel21.Controls.Add(this.label73);
-            this.panel21.Location = new System.Drawing.Point(251, 173);
+            this.panel21.Location = new System.Drawing.Point(326, 172);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(151, 17);
             this.panel21.TabIndex = 21;
@@ -1879,6 +1990,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox13.Location = new System.Drawing.Point(38, -1);
             this.richTextBox13.Name = "richTextBox13";
+            this.richTextBox13.ReadOnly = true;
             this.richTextBox13.Size = new System.Drawing.Size(95, 23);
             this.richTextBox13.TabIndex = 1;
             this.richTextBox13.Text = "";
@@ -1901,7 +2013,7 @@ namespace DiplomaSolutions
             this.panel20.Controls.Add(this.label71);
             this.panel20.Controls.Add(this.richTextBox12);
             this.panel20.Controls.Add(this.label72);
-            this.panel20.Location = new System.Drawing.Point(251, 149);
+            this.panel20.Location = new System.Drawing.Point(326, 148);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(151, 17);
             this.panel20.TabIndex = 25;
@@ -1919,6 +2031,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox10.Location = new System.Drawing.Point(113, -1);
             this.richTextBox10.Name = "richTextBox10";
+            this.richTextBox10.ReadOnly = true;
             this.richTextBox10.Size = new System.Drawing.Size(28, 20);
             this.richTextBox10.TabIndex = 5;
             this.richTextBox10.Text = "";
@@ -1936,6 +2049,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox11.Location = new System.Drawing.Point(74, -1);
             this.richTextBox11.Name = "richTextBox11";
+            this.richTextBox11.ReadOnly = true;
             this.richTextBox11.Size = new System.Drawing.Size(28, 20);
             this.richTextBox11.TabIndex = 3;
             this.richTextBox11.Text = "";
@@ -1953,6 +2067,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox12.Location = new System.Drawing.Point(32, -1);
             this.richTextBox12.Name = "richTextBox12";
+            this.richTextBox12.ReadOnly = true;
             this.richTextBox12.Size = new System.Drawing.Size(28, 20);
             this.richTextBox12.TabIndex = 1;
             this.richTextBox12.Text = "";
@@ -1972,7 +2087,7 @@ namespace DiplomaSolutions
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(251, 2);
+            this.label37.Location = new System.Drawing.Point(326, 1);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(151, 23);
             this.label37.TabIndex = 0;
@@ -1985,7 +2100,7 @@ namespace DiplomaSolutions
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(409, 2);
+            this.label38.Location = new System.Drawing.Point(484, 1);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(136, 23);
             this.label38.TabIndex = 1;
@@ -1997,7 +2112,7 @@ namespace DiplomaSolutions
             this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(4, 26);
+            this.label39.Location = new System.Drawing.Point(4, 25);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(113, 23);
             this.label39.TabIndex = 2;
@@ -2009,7 +2124,7 @@ namespace DiplomaSolutions
             this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(4, 50);
+            this.label40.Location = new System.Drawing.Point(4, 49);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(105, 23);
             this.label40.TabIndex = 3;
@@ -2021,7 +2136,7 @@ namespace DiplomaSolutions
             this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(4, 74);
+            this.label41.Location = new System.Drawing.Point(4, 73);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(108, 23);
             this.label41.TabIndex = 4;
@@ -2033,7 +2148,7 @@ namespace DiplomaSolutions
             this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(4, 98);
+            this.label42.Location = new System.Drawing.Point(4, 97);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(161, 23);
             this.label42.TabIndex = 5;
@@ -2045,7 +2160,7 @@ namespace DiplomaSolutions
             this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(4, 122);
+            this.label43.Location = new System.Drawing.Point(4, 121);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(169, 23);
             this.label43.TabIndex = 6;
@@ -2057,7 +2172,7 @@ namespace DiplomaSolutions
             this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(4, 146);
+            this.label44.Location = new System.Drawing.Point(4, 145);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(213, 23);
             this.label44.TabIndex = 7;
@@ -2069,7 +2184,7 @@ namespace DiplomaSolutions
             this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(4, 170);
+            this.label45.Location = new System.Drawing.Point(4, 169);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(228, 23);
             this.label45.TabIndex = 8;
@@ -2081,7 +2196,7 @@ namespace DiplomaSolutions
             this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(4, 194);
+            this.label46.Location = new System.Drawing.Point(4, 193);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(240, 23);
             this.label46.TabIndex = 9;
@@ -2093,7 +2208,7 @@ namespace DiplomaSolutions
             this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(4, 218);
+            this.label47.Location = new System.Drawing.Point(4, 217);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(124, 23);
             this.label47.TabIndex = 10;
@@ -2105,9 +2220,9 @@ namespace DiplomaSolutions
             this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(4, 242);
+            this.label48.Location = new System.Drawing.Point(4, 241);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(131, 24);
+            this.label48.Size = new System.Drawing.Size(131, 23);
             this.label48.TabIndex = 11;
             this.label48.Text = "Початковий діаметр, мм";
             this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2117,9 +2232,9 @@ namespace DiplomaSolutions
             this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(4, 267);
+            this.label49.Location = new System.Drawing.Point(4, 265);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(97, 22);
+            this.label49.Size = new System.Drawing.Size(97, 23);
             this.label49.TabIndex = 12;
             this.label49.Text = "Висота витка, мм";
             this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2129,7 +2244,7 @@ namespace DiplomaSolutions
             this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(4, 290);
+            this.label50.Location = new System.Drawing.Point(4, 289);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(141, 23);
             this.label50.TabIndex = 13;
@@ -2141,7 +2256,7 @@ namespace DiplomaSolutions
             this.label51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(4, 314);
+            this.label51.Location = new System.Drawing.Point(4, 313);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(112, 23);
             this.label51.TabIndex = 14;
@@ -2153,7 +2268,7 @@ namespace DiplomaSolutions
             this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(4, 338);
+            this.label52.Location = new System.Drawing.Point(4, 337);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(131, 23);
             this.label52.TabIndex = 15;
@@ -2165,7 +2280,7 @@ namespace DiplomaSolutions
             this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(4, 362);
+            this.label53.Location = new System.Drawing.Point(4, 361);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(203, 23);
             this.label53.TabIndex = 16;
@@ -2177,7 +2292,7 @@ namespace DiplomaSolutions
             this.label54.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(4, 386);
+            this.label54.Location = new System.Drawing.Point(4, 385);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(215, 23);
             this.label54.TabIndex = 17;
@@ -2189,7 +2304,7 @@ namespace DiplomaSolutions
             this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(4, 410);
+            this.label55.Location = new System.Drawing.Point(4, 409);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(198, 23);
             this.label55.TabIndex = 18;
@@ -2202,7 +2317,7 @@ namespace DiplomaSolutions
             this.panel15.AutoSize = true;
             this.panel15.Controls.Add(this.richTextBox1);
             this.panel15.Controls.Add(this.label58);
-            this.panel15.Location = new System.Drawing.Point(251, 29);
+            this.panel15.Location = new System.Drawing.Point(326, 28);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(151, 17);
             this.panel15.TabIndex = 20;
@@ -2211,6 +2326,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox1.Location = new System.Drawing.Point(38, -1);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(95, 23);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
@@ -2224,46 +2340,24 @@ namespace DiplomaSolutions
             this.label58.TabIndex = 0;
             this.label58.Text = "x =";
             // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.richTextBox2);
-            this.panel16.Controls.Add(this.label59);
-            this.panel16.Location = new System.Drawing.Point(251, 53);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(151, 17);
-            this.panel16.TabIndex = 21;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(38, 0);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(96, 19);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = "";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(3, 4);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(22, 13);
-            this.label59.TabIndex = 0;
-            this.label59.Text = "u =";
-            // 
             // panel17
             // 
+            this.panel17.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.SetColumnSpan(this.panel17, 2);
             this.panel17.Controls.Add(this.richTextBox3);
             this.panel17.Controls.Add(this.label60);
-            this.panel17.Location = new System.Drawing.Point(251, 77);
+            this.panel17.Location = new System.Drawing.Point(326, 73);
+            this.panel17.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(151, 17);
+            this.panel17.Size = new System.Drawing.Size(291, 23);
             this.panel17.TabIndex = 22;
             // 
             // richTextBox3
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(39, -1);
+            this.richTextBox3.Location = new System.Drawing.Point(108, 2);
             this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(95, 20);
+            this.richTextBox3.ReadOnly = true;
+            this.richTextBox3.Size = new System.Drawing.Size(96, 20);
             this.richTextBox3.TabIndex = 1;
             this.richTextBox3.Text = "";
             // 
@@ -2275,7 +2369,6 @@ namespace DiplomaSolutions
             this.label60.Size = new System.Drawing.Size(33, 13);
             this.label60.TabIndex = 0;
             this.label60.Text = "aw = ";
-            
             // 
             // panel18
             // 
@@ -2286,7 +2379,7 @@ namespace DiplomaSolutions
             this.panel18.Controls.Add(this.label62);
             this.panel18.Controls.Add(this.richTextBox4);
             this.panel18.Controls.Add(this.label61);
-            this.panel18.Location = new System.Drawing.Point(251, 101);
+            this.panel18.Location = new System.Drawing.Point(326, 100);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(151, 17);
             this.panel18.TabIndex = 23;
@@ -2304,6 +2397,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox6.Location = new System.Drawing.Point(112, -1);
             this.richTextBox6.Name = "richTextBox6";
+            this.richTextBox6.ReadOnly = true;
             this.richTextBox6.Size = new System.Drawing.Size(28, 20);
             this.richTextBox6.TabIndex = 5;
             this.richTextBox6.Text = "";
@@ -2316,12 +2410,12 @@ namespace DiplomaSolutions
             this.label63.Size = new System.Drawing.Size(9, 13);
             this.label63.TabIndex = 4;
             this.label63.Text = "\'";
-            
             // 
             // richTextBox5
             // 
             this.richTextBox5.Location = new System.Drawing.Point(74, -1);
             this.richTextBox5.Name = "richTextBox5";
+            this.richTextBox5.ReadOnly = true;
             this.richTextBox5.Size = new System.Drawing.Size(28, 20);
             this.richTextBox5.TabIndex = 3;
             this.richTextBox5.Text = "";
@@ -2339,6 +2433,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox4.Location = new System.Drawing.Point(32, -1);
             this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.ReadOnly = true;
             this.richTextBox4.Size = new System.Drawing.Size(28, 20);
             this.richTextBox4.TabIndex = 1;
             this.richTextBox4.Text = "";
@@ -2361,7 +2456,7 @@ namespace DiplomaSolutions
             this.panel19.Controls.Add(this.label67);
             this.panel19.Controls.Add(this.richTextBox9);
             this.panel19.Controls.Add(this.label68);
-            this.panel19.Location = new System.Drawing.Point(251, 125);
+            this.panel19.Location = new System.Drawing.Point(326, 124);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(151, 17);
             this.panel19.TabIndex = 24;
@@ -2379,6 +2474,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox7.Location = new System.Drawing.Point(113, -1);
             this.richTextBox7.Name = "richTextBox7";
+            this.richTextBox7.ReadOnly = true;
             this.richTextBox7.Size = new System.Drawing.Size(28, 20);
             this.richTextBox7.TabIndex = 5;
             this.richTextBox7.Text = "";
@@ -2396,6 +2492,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox8.Location = new System.Drawing.Point(74, -1);
             this.richTextBox8.Name = "richTextBox8";
+            this.richTextBox8.ReadOnly = true;
             this.richTextBox8.Size = new System.Drawing.Size(28, 20);
             this.richTextBox8.TabIndex = 3;
             this.richTextBox8.Text = "";
@@ -2413,6 +2510,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox9.Location = new System.Drawing.Point(32, -1);
             this.richTextBox9.Name = "richTextBox9";
+            this.richTextBox9.ReadOnly = true;
             this.richTextBox9.Size = new System.Drawing.Size(28, 20);
             this.richTextBox9.TabIndex = 1;
             this.richTextBox9.Text = "";
@@ -2432,7 +2530,7 @@ namespace DiplomaSolutions
             this.panel29.AutoSize = true;
             this.panel29.Controls.Add(this.richTextBox23);
             this.panel29.Controls.Add(this.label83);
-            this.panel29.Location = new System.Drawing.Point(251, 365);
+            this.panel29.Location = new System.Drawing.Point(326, 364);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(151, 17);
             this.panel29.TabIndex = 27;
@@ -2441,6 +2539,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox23.Location = new System.Drawing.Point(38, -1);
             this.richTextBox23.Name = "richTextBox23";
+            this.richTextBox23.ReadOnly = true;
             this.richTextBox23.Size = new System.Drawing.Size(95, 23);
             this.richTextBox23.TabIndex = 1;
             this.richTextBox23.Text = "";
@@ -2460,7 +2559,7 @@ namespace DiplomaSolutions
             this.panel34.AutoSize = true;
             this.panel34.Controls.Add(this.richTextBox26);
             this.panel34.Controls.Add(this.label86);
-            this.panel34.Location = new System.Drawing.Point(251, 437);
+            this.panel34.Location = new System.Drawing.Point(326, 436);
             this.panel34.Name = "panel34";
             this.panel34.Size = new System.Drawing.Size(151, 17);
             this.panel34.TabIndex = 26;
@@ -2469,6 +2568,7 @@ namespace DiplomaSolutions
             // 
             this.richTextBox26.Location = new System.Drawing.Point(38, -1);
             this.richTextBox26.Name = "richTextBox26";
+            this.richTextBox26.ReadOnly = true;
             this.richTextBox26.Size = new System.Drawing.Size(95, 23);
             this.richTextBox26.TabIndex = 1;
             this.richTextBox26.Text = "";
@@ -2482,11 +2582,101 @@ namespace DiplomaSolutions
             this.label86.TabIndex = 0;
             this.label86.Text = "rk =";
             // 
+            // label96
+            // 
+            this.label96.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label96.AutoSize = true;
+            this.label96.Location = new System.Drawing.Point(4, 457);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(315, 23);
+            this.label96.TabIndex = 29;
+            this.label96.Text = "Відстань від осі черв\'яка до центру шліфувального круга, мм";
+            this.label96.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label96.Click += new System.EventHandler(this.label96_Click);
+            // 
+            // panel40
+            // 
+            this.panel40.Controls.Add(this.label98);
+            this.panel40.Controls.Add(this.richTextBox31);
+            this.panel40.Controls.Add(this.label99);
+            this.panel40.Controls.Add(this.richTextBox32);
+            this.panel40.Controls.Add(this.label100);
+            this.panel40.Controls.Add(this.richTextBox33);
+            this.panel40.Controls.Add(this.label101);
+            this.panel40.Location = new System.Drawing.Point(326, 484);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(151, 17);
+            this.panel40.TabIndex = 24;
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Location = new System.Drawing.Point(140, 1);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(11, 13);
+            this.label98.TabIndex = 6;
+            this.label98.Text = "\'\'";
+            // 
+            // richTextBox31
+            // 
+            this.richTextBox31.Location = new System.Drawing.Point(112, -1);
+            this.richTextBox31.Name = "richTextBox31";
+            this.richTextBox31.ReadOnly = true;
+            this.richTextBox31.Size = new System.Drawing.Size(28, 20);
+            this.richTextBox31.TabIndex = 5;
+            this.richTextBox31.Text = "";
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Location = new System.Drawing.Point(105, 2);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(9, 13);
+            this.label99.TabIndex = 4;
+            this.label99.Text = "\'";
+            // 
+            // richTextBox32
+            // 
+            this.richTextBox32.Location = new System.Drawing.Point(74, -1);
+            this.richTextBox32.Name = "richTextBox32";
+            this.richTextBox32.ReadOnly = true;
+            this.richTextBox32.Size = new System.Drawing.Size(28, 20);
+            this.richTextBox32.TabIndex = 3;
+            this.richTextBox32.Text = "";
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(64, 4);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(11, 13);
+            this.label100.TabIndex = 2;
+            this.label100.Text = "°";
+            // 
+            // richTextBox33
+            // 
+            this.richTextBox33.Location = new System.Drawing.Point(32, -1);
+            this.richTextBox33.Name = "richTextBox33";
+            this.richTextBox33.ReadOnly = true;
+            this.richTextBox33.Size = new System.Drawing.Size(28, 20);
+            this.richTextBox33.TabIndex = 1;
+            this.richTextBox33.Text = "";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Location = new System.Drawing.Point(0, 2);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(26, 13);
+            this.label101.TabIndex = 0;
+            this.label101.Text = "γᵤ =";
+            // 
             // CalculationScheme
             // 
             this.CalculationScheme.Location = new System.Drawing.Point(4, 22);
             this.CalculationScheme.Name = "CalculationScheme";
-            this.CalculationScheme.Size = new System.Drawing.Size(671, 654);
+            this.CalculationScheme.Size = new System.Drawing.Size(643, 668);
             this.CalculationScheme.TabIndex = 2;
             this.CalculationScheme.Text = "Схема розрахунку";
             this.CalculationScheme.UseVisualStyleBackColor = true;
@@ -2495,7 +2685,7 @@ namespace DiplomaSolutions
             // 
             this.CalculationMethod.Location = new System.Drawing.Point(4, 22);
             this.CalculationMethod.Name = "CalculationMethod";
-            this.CalculationMethod.Size = new System.Drawing.Size(671, 654);
+            this.CalculationMethod.Size = new System.Drawing.Size(643, 668);
             this.CalculationMethod.TabIndex = 3;
             this.CalculationMethod.Text = "Методика розрахунку";
             this.CalculationMethod.UseVisualStyleBackColor = true;
@@ -2504,7 +2694,7 @@ namespace DiplomaSolutions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 642);
+            this.ClientSize = new System.Drawing.Size(651, 695);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -2561,6 +2751,10 @@ namespace DiplomaSolutions
             this.panel50.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            this.panel41.ResumeLayout(false);
+            this.panel41.PerformLayout();
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
             this.panel28.ResumeLayout(false);
@@ -2589,8 +2783,6 @@ namespace DiplomaSolutions
             this.panel20.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel18.ResumeLayout(false);
@@ -2601,6 +2793,8 @@ namespace DiplomaSolutions
             this.panel29.PerformLayout();
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
+            this.panel40.ResumeLayout(false);
+            this.panel40.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2651,7 +2845,6 @@ namespace DiplomaSolutions
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox diameterBOx;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox textBox2;
@@ -2696,7 +2889,6 @@ namespace DiplomaSolutions
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label57;
@@ -2728,9 +2920,6 @@ namespace DiplomaSolutions
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.RichTextBox richTextBox9;
         private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Panel panel30;
-        private System.Windows.Forms.RichTextBox richTextBox25;
-        private System.Windows.Forms.Label label85;
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.RichTextBox richTextBox24;
         private System.Windows.Forms.Label label84;
@@ -2775,11 +2964,7 @@ namespace DiplomaSolutions
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.RichTextBox richTextBox23;
         private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.RichTextBox richTextBox26;
-        private System.Windows.Forms.Label label86;
         private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.Label label88;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label108;
         private System.Windows.Forms.Label label109;
@@ -2810,6 +2995,28 @@ namespace DiplomaSolutions
         private System.Windows.Forms.Panel panel39;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.ComboBox BoxZ1;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.RichTextBox richTextBox25;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.RichTextBox richTextBox26;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.RichTextBox richTextBox31;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.RichTextBox richTextBox32;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.RichTextBox richTextBox33;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.RichTextBox richTextBox34;
+        private System.Windows.Forms.Label label102;
     }
 }
 

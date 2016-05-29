@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DiplomaSolutions
@@ -10,8 +11,6 @@ namespace DiplomaSolutions
             InitializeComponent();
         }
 
-       
-       
 
         private void Calculate_Click(object sender, EventArgs e)
         {
@@ -22,7 +21,7 @@ namespace DiplomaSolutions
             input.gearType = gearData.SelectedItem.ToString();
             input.m = double.Parse(moduleBox.SelectedItem.ToString().Replace('.', ','));
             input.q = double.Parse(diameterBOx.SelectedItem.ToString().Replace('.', ','));
-            if (int.TryParse(textBox1.Text, out temp))
+            if (int.TryParse(BoxZ1.SelectedItem.ToString(), out temp))
             {
                 input.z1 = temp;
             }
@@ -31,6 +30,7 @@ namespace DiplomaSolutions
             {
                 input.z2 = temp;
             }
+            temp = 0;
             if (int.TryParse(textBox3.Text, out temp))
             {
                 if (int.TryParse(textBox4.Text, out temp2) || textBox4.Text == "" || textBox4.Text == null)
@@ -93,11 +93,12 @@ namespace DiplomaSolutions
 
 
             Console.WriteLine(input.ToString());
-            CalculatedData finalData = new CalculatedData();
-            OverAllCalculations calculations = new OverAllCalculations(finalData, input);
+            var finalData = new CalculatedData();
+            var calculations = new OverAllCalculations(finalData, input);
             calculations.initializeCalcFunctions();
             calculations.initializeCalculations();
-            
+            Console.WriteLine(finalData.ToString());
+            tabControl1.SelectedIndex = 1;
         }
 
         private void moduleBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,12 +111,22 @@ namespace DiplomaSolutions
             {
                 textBox15.ReadOnly = false;
                 tableLayoutPanel1.RowStyles[18].SizeType = SizeType.AutoSize;
+                tableLayoutPanel2.RowStyles[20].SizeType = SizeType.AutoSize;
+                tableLayoutPanel2.RowStyles[19].SizeType = SizeType.AutoSize;
+                label87.Location = new Point(label87.Location.X, label87.Location.Y + 50);
+                tableLayoutPanel3.Location = new Point(tableLayoutPanel3.Location.X, tableLayoutPanel3.Location.Y + 50);
             }
             else
             {
                 textBox15.ReadOnly = false;
                 tableLayoutPanel1.RowStyles[18].SizeType = SizeType.Absolute;
                 tableLayoutPanel1.RowStyles[18].Height = 0;
+                tableLayoutPanel2.RowStyles[20].SizeType = SizeType.Absolute;
+                tableLayoutPanel2.RowStyles[20].Height = 0;
+                tableLayoutPanel2.RowStyles[19].SizeType = SizeType.Absolute;
+                tableLayoutPanel2.RowStyles[19].Height = 0;
+                label87.Location = new Point(label87.Location.X, label87.Location.Y - 45);
+                tableLayoutPanel3.Location = new Point(tableLayoutPanel3.Location.X, tableLayoutPanel3.Location.Y - 45);
             }
             if (gearData.SelectedItem.ToString() == "ZI")
             {
@@ -176,6 +187,10 @@ namespace DiplomaSolutions
                 textBox10.ReadOnly = false;
                 textBox11.ReadOnly = false;
             }
+        }
+
+        private void label96_Click(object sender, EventArgs e)
+        {
         }
     }
 }

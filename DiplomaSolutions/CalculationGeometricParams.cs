@@ -38,6 +38,7 @@ namespace DiplomaSolutions
         public void calculateWormDrag()
         {
             calculatedData.x = inputData.aW/inputData.m - 0.5*(inputData.z2 + inputData.q);
+            inputData.x = calculatedData.x;
         }
 
         public void calculateTransmitionCoef()
